@@ -11,8 +11,28 @@ void setup(){
   ellipse(225,225,75,75);
   ellipse(375,225,75,75);
   fill(#000000);
-  ellipse(mouseX,mouseY,30,30);
+  if(mouseX<210 )
+  {
+  mouseX = 210;
+  }
+  if(mouseX>240 )
+  {
+  mouseX = 240;
+  }
+  if(mouseY>240)
+  {
+    mouseY=240;
+  }
+  if(mouseY<210)
+  {
+    mouseY=210;
+  }
+  
+   ellipse(mouseX,mouseY,30,30);
   ellipse(mouseX+150,mouseY,30,30);
+  if(mousePressed){
+   println(mouseX + " " + mouseY);
+  }
   
 
     }
